@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="viewpart" content="width-device-width, initial-scale=1.0">  <!-- this meta makes mobile friendly instead of shrinking -->
+	<meta charset="UTF-8">
+	<meta name="viewpart" content="width-device-width, initial-scale=1.0">
+	<title>Black Sea</title>
+	<link rel="stylesheet" type="text/css" href="styles/main.css">
+	<script src="https://code.jquery.com/jquery-1.12.1.min.js"></script>
+
+	<script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+    <script>
+      function initialize() {
+        var map_canvas = document.getElementById('map_canvas');
+        var map_options = {
+          center: new google.maps.LatLng(54.6929, 25.3565),
+          zoom: 13,
+          mapTypeId: google.maps.MapTypeId.ROADMAP
+        }
+        var map = new google.maps.Map(map_canvas, map_options)
+      }
+      google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
+
+</head>
+<body>
+	<nav class="nav">
+		<div class="container">
+			<h2>Black Sea</h2>
+			<img class="menu-icon" src="img/menu-icon.png" alt="Menu icon">
+			<ul class="navigation-list">
+				<li><a href="#">HOME</a><span class="nav-slash">/</span></li>
+				<li><a href="#">ABOUT ME</a><span class="nav-slash">/</span></li>
+				<li><a href="#">PORTFOLIO</a><span class="nav-slash">/</span></li>
+				<li><a href="#">CONTACT ME</a></li>
+			</ul>
+		</div>
+	</nav>
+
+	<header class="header">
+		<h1>WE NEED TONIC OF<br>WILDNESS</h1>
+		<h2><a href="#">Read more</a></h2>
+		<ul class="clearfix">
+			<li></li> 
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+	</header>
+
+	<section class="second-section">
+		<div class="container">
+			<h3>At the same time that we are earnest to explore<br>&amp; learn all things</h3>
+			<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+			<ul>
+				<li><img src="img/basket.png" alt="Basket"></li>
+				<li><img src="img/globe.png" alt="Globe"></li>
+				<li><img src="img/portfolio.png" alt="Porfolio"></li>
+			</ul>
+		</div>		
+	</section>
+
+	<section class="third-section">
+		<div class="container">
+			
+				<div class="man-pic">
+					<img src="img/man.png" alt="Man">
+				</div>
+				<div class="name-quotation">
+					<h1>Dhavan</h1>
+					<img src="img/quotation.png" alt="Quotaition marks">
+				</div>	
+		
+			<p class="clearfix">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting</p>
+		</div>
+	</section>
+
+	<section class="forth-section">
+		<div id="map_canvas"></div>
+		<div class="round-form">
+			<form>
+				<input type="text" placeholder="Name" name="Name" id="name"><br>
+				<input type="text" placeholder="Email address" name="email" id="email"><br>
+				<textarea name="write" placeholder="Message" rows ="5"  id="txtArea"></textarea>
+				<br>
+			</form>
+			<a href="#"><img src="img/check-sign.png" alt="Check sign"></a>
+		</div>		
+	</section>
+
+	<footer>
+		<span>COPYRIGHT &copy; 2016 <a href="http://www.aidasb.cu.cc">AIDASB.CU.CC</a></span>
+	</footer>
+
+	<script>
+		$(function() {
+			$nav = $('.navigation-list');
+
+			$('.menu-icon').click(function() {
+				$nav.slideToggle();
+			});
+
+			$(window).resize(function() {
+				if ($(window).width() >= 650 ) {
+					$nav.show();
+				} else {
+					$nav.hide();
+				}
+			});
+		});
+	</script>
+
+
+
+</body>
+</html>
